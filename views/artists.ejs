@@ -1,0 +1,16 @@
+<div class="artist-container">
+    <div class="artist">
+      <% artists.forEach((artist, i) => { %>
+        <% if(artist.images.length === 0) { %>
+          <% console.log("artistsName", artist.name) %> 
+          <% return %>
+          <% }%>
+        <p class="artist-name"><%- artist.name%></p>
+        <img src="<%= artist.images[0].url%>" width="320" alt="picture" />  
+          <% console.log("array of images", artist.images) %> 
+          <button class="album-btn"><a href="/albums/<%- artist.id%>">View Albums</a></button>
+      <% }) %>
+    </div>
+    
+  </div>
+  

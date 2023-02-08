@@ -1,0 +1,11 @@
+<div class="album-container">
+    <div class="album">
+      <% albums.forEach((album) => { %>
+        <% console.log("ablumName.........", album.name) %> 
+        <p class="album-name"><%- album.name%></p>
+      <img src="<%= album.images[0].url%>" width="320" alt="picture" />
+      <% console.log("album.artists", album.id) %> 
+      <button class="track-btn"><a href="/tracks/<%-album.id%> "> View Tracks </a></button>
+    <% }) %>
+    </div>  
+</div>
